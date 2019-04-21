@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./styles.css";
+import Person from "./Person/Person";
 
 function App() {
   return (
@@ -34,13 +35,14 @@ ReactDOM.render(to("carla  Sofia"), rootElement);
 function Welcome(props) {
   return (
     <h1>
-      Hello, {props.name} you'are
+      <Person name="Carlita"> These are prop children</Person>
+      you'are {}
       {Math.floor(Math.random() * 30)}
     </h1>
   );
 }
 
-const element2 = <Welcome name="Carla props" />;
-const element3 = <Welcome name="Carla props" />;
+const element2 = <Welcome />;
+const element3 = <Welcome name="Carla" />;
 
 ReactDOM.render(element2, rootElement);
